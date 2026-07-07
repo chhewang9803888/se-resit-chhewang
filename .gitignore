@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Microsoft Office temp files
+~$*
+*.tmp
+
+# Temporary / scratch files
+Temp/
+
+# Assessment documents (not tracked)
+Alt Assessment Brief Software Engineering.pdf
+SE-Resit-FINAL-Report.docx
+
+# Editors & IDEs
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Node (if added later)
+node_modules/
+
+# Python (if added later)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment files
+.env
+.env.local
