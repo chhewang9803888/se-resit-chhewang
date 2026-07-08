@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= heading
+
+  h2 Names as a list
+  ul
+    each row in rows
+      li= row.name
+
+  h2 Names and IDs as a table
+  table(border="1")
+    tr
+      th ID
+      th Name
+    each row in rows
+      tr
+        td= row.id
+        td= row.name

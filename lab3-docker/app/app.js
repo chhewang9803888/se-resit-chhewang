@@ -7,12 +7,37 @@ var app = express();
 // Add static files location
 app.use(express.static("static"));
 
+// Set the view engine to pug and the views folder location
+app.set("view engine", "pug");
+app.set("views", "./app/views");
+
 // Get the functions in the db.js file to use
 const db = require('./services/db');
 
 // Create a route for root - /
 app.get("/", function(req, res) {
     res.send("hello Chhewang");
+});
+
+// Lab 5: render the Pug index view
+app.get("/pug-index", function(req, res) {
+    res.render("index", {
+        title: "Lab 5 - MVC with Pug",
+        heading: "Chhewang Tamang",
+        data: ["Git Basics", "HTML Basics", "Docker Environment", "Express Routing", "MVC with Pug"]
+    });
+});
+
+// Render the names in the database, as a list and as a table
+app.get("/db", function(req, res) {
+    sql = 'select * from test_table';
+    db.query(sql).then(rows => {
+        res.render("db", {
+            title: "Lab 5 - Database View",
+            heading: "Names in test_table",
+            rows: rows
+        });
+    });
 });
 
 // Create a route for /roehampton

@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= heading
+  p Welcome to the Lab 5 Pug exercise, #{heading}
+
+  ul
+    each item in data
+      li= item
