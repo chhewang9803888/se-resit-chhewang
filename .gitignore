@@ -34,3 +34,6 @@ venv/
 # Environment files
 .env
 .env.local
+
+# Submission working copy (report goes to Moodle, not the repo)
+Submission/

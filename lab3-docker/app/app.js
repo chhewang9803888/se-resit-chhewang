@@ -65,6 +65,8 @@ app.get("/goodbye", function(req, res) {
 
 // Create a dynamic route for /hello/<name>, where name is any value provided by user
 // At the end of the URL
+
+
 // Responds to a 'GET' request
 app.get("/hello/:name", function(req, res) {
     // req.params contains any parameters in the request
